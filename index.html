@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Product Intelligence Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; color: white; margin-bottom: 50px; }
+        .header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .alert-banner {
+            background: #dc3545; color: white; padding: 15px;
+            border-radius: 10px; text-align: center; margin-bottom: 30px;
+            font-size: 1.1rem; font-weight: bold;
+        }
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px; margin-bottom: 50px;
+        }
+        .card {
+            background: white; padding: 30px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #667eea; margin: 15px 0; font-size: 1.5rem; }
+        .btn {
+            display: inline-block; padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; text-decoration: none; border-radius: 25px;
+            font-weight: 500; transition: all 0.3s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-critical {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+        .stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px; margin-bottom: 40px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9); padding: 20px;
+            border-radius: 10px; text-align: center;
+        }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #667eea; }
+        .findings {
+            background: rgba(255, 255, 255, 0.95); padding: 30px;
+            border-radius: 15px; margin: 30px 0;
+        }
+        .finding-critical {
+            background: #f8d7da; border-left: 5px solid #dc3545;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+        }
+        .finding-opportunity {
+            background: #d4edda; border-left: 5px solid #28a745;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Security Product Intelligence</h1>
+            <p>Critical Issues & Competitive Analysis for Enterprise Security Market</p>
+        </div>
+        
+        <div class="alert-banner">
+            🚨 BREAKING: Norton reputation crisis & McAfee GDPR violations identified through deep review analysis
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div>Security Products</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">67%</div>
+                <div>Have Performance Issues</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div>Critical Compliance Issues</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$2B+</div>
+                <div>Market Value at Risk</div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <div style="font-size: 3rem; margin-bottom: 20px;">🚨</div>
+                <h3>Enhanced Intelligence Dashboard</h3>
+                <p style="color: #666; margin-bottom: 20px;">Deep analysis revealing Norton's reputation crisis, McAfee's GDPR violations, and Bitdefender's Linux opportunity.</p>
+                <a href="enhanced_dashboard.html" class="btn btn-critical">View Critical Issues</a>
+            </div>
+            
+            <div class="card">
+                <div style="font-size: 3rem; margin-bottom: 20px;">📊</div>
+                <h3>Interactive Analytics</h3>
+                <p style="color: #666; margin-bottom: 20px;">Streamlit-powered dashboard with real-time filtering and strategic recommendations.</p>
+                <a href="#" class="btn">Launch Live Dashboard</a>
+            </div>
+            
+            <div class="card">
+                <div style="font-size: 3rem; margin-bottom: 20px;">📈</div>
+                <h3>Executive Intelligence Report</h3>
+                <p style="color: #666; margin-bottom: 20px;">Comprehensive analysis revealing performance issues and market opportunities.</p>
+                <a href="#" class="btn">Read Full Report</a>
+            </div>
+        </div>
+        
+        <div class="findings">
+            <h2>🔍 Key Intelligence Findings</h2>
+            
+            <div class="finding-critical">
+                <h4>🚨 Norton Reputation Crisis</h4>
+                <p><strong>Critical Issue:</strong> Reddit users actively questioning "is norton truly bad?" indicating serious community trust issues.</p>
+            </div>
+            
+            <div class="finding-critical">
+                <h4>⚖️ McAfee GDPR Compliance Violations</h4>
+                <p><strong>Legal Risk:</strong> Users reporting McAfee as "scam artists" who make account deletion difficult and request excessive personal data.</p>
+            </div>
+            
+            <div class="finding-opportunity">
+                <h4>🐧 Bitdefender Linux Market Leadership</h4>
+                <p><strong>Growth Opportunity:</strong> Unique position in underserved Linux consumer security market.</p>
+            </div>
+            
+            <div class="finding-opportunity">
+                <h4>📱 Cross-Platform Mobile Success</h4>
+                <p><strong>Market Strength:</strong> Multiple vendors receiving consistent positive feedback for mobile protection.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; color: white; margin-top: 50px;">
+            <p>🏆 <strong>Key Finding:</strong> Bitdefender positioned for growth with unique Linux opportunity</p>
+            <p>⚠️ <strong>Critical Alert:</strong> Norton and McAfee face immediate reputation and compliance challenges</p>
+            <p>Generated by Consumer Security Analysis Platform | Module 3: Advanced Product Intelligence</p>
+            <p><a href="https://github.com/yvh1223/consumer-security-analysis" style="color: white;">📖 View Source Code on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
