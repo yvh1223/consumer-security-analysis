@@ -1,0 +1,79 @@
+# Consumer Security Product Analysis Configuration
+
+data_collection:
+  target_companies:
+    - McAfee
+    - Norton
+    - Kaspersky
+    - Bitdefender
+    - Avast
+    - AVG
+    - Malwarebytes
+    - ESET
+    - Trend Micro
+    - Windows Defender
+  
+  max_reviews_per_product: 100
+  min_reviews_per_product: 5
+  
+  sources:
+    app_stores:
+      - Google Play Store
+      - Apple App Store
+    forums:
+      - Reddit
+    retail:
+      - Amazon
+      - Rediff Shopping
+
+scrapers:
+  max_retries: 3
+  timeout_seconds: 15
+  playstore_delay: 2.0
+  reddit_delay: 1.5
+  amazon_delay: 2.5
+  appstore_delay: 1.5
+
+analysis:
+  sentiment_model: openai
+  openai_model: gpt-4
+  categories:
+    - Performance
+    - Privacy
+    - Support
+    - Usability
+    - Value
+  
+  sample_size: 20  # For OpenAI analysis
+  keyword_fallback: true
+
+reddit:
+  subreddits:
+    - antivirus
+    - cybersecurity
+    - techsupport
+    - privacy
+    - malware
+    - windows
+    - security
+    - pcmasterrace
+  
+  search_limit: 25
+  time_filter: year
+
+visualization:
+  dashboard_port: 8501
+  theme: streamlit
+  charts:
+    - sentiment_by_product
+    - rating_distribution
+    - source_comparison
+    - temporal_analysis
+
+database:
+  type: json  # Simple file-based storage
+  backup_format: csv
+  
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
